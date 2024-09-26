@@ -52,3 +52,16 @@ events_by_decade <- events_by_decade %>%
   mutate(change = event_count - lag(event_count))
 
 print(events_by_decade)
+
+
+# Role 3: Visualize trends using a line chart.
+
+
+{r}
+ggplot(events_by_decade, aes(x = decade, y = event_count)) +
+  geom_line(color = "blue", size = 1) +
+  geom_point(size = 3, color = "red") +
+  labs(title = "Attack Frequency Over Time by Decade",
+       x = "Decade",
+       y = "Number of Events") +
+  theme_minimal()
