@@ -40,7 +40,6 @@ print(data$decade)
 
 #Role 2: Calculate the change in attack frequency over time.
 
-  
 events_by_decade <- data %>%
   group_by(decade) %>%
   summarise(event_count = n()) %>%
